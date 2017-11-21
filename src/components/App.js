@@ -1,0 +1,29 @@
+import React from 'react';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => ({
+    appName: state.appName
+});
+
+class App extends React.Component {
+    /*
+    constructor() {
+      super();
+      this.state = {};
+    }
+  
+    componentWillMount() {
+      store.subscribe(() => this.setState(store.getState()));
+    }
+    */
+
+    render() {
+      return (
+        <div>
+          { this.props.appName }
+        </div>
+      );
+    }
+  }
+
+export default connect(mapStateToProps, () => ({}) )(App);
